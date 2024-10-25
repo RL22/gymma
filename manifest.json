@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Gymma SEO: AI Content Brief & Workflow Manager",
+  "version": "1.0",
+  "description": "Generates SEO-based content briefs and manages workflows.",
+  "permissions": [
+    "identity",
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_popup": "src/index.html"
+  },
+  "side_panel": {
+    "default_path": "src/sidepanel.html"
+  },
+  "oauth2": {
+    "client_id": "YOUR_GOOGLE_OAUTH_CLIENT_ID",
+    "scopes": [
+      "https://www.googleapis.com/auth/webmasters.readonly",
+      "https://www.googleapis.com/auth/drive"
+    ]
+  }
+}
